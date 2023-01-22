@@ -9,8 +9,8 @@ public class Passaro extends Animal{
     private boolean registrado;
 
     public Passaro() {}
-    public Passaro(String nome, Dono dono, String raca, String idade, boolean estaDoente, EnumTipoAnimal tipo, String corPenas, boolean nascidoEmCativeiro, boolean registrado) {
-        super(nome, dono, raca, idade, estaDoente, tipo);
+    public Passaro(String nome, Dono dono, String raca, String idade, boolean estaDoente,String sintomas, EnumTipoAnimal tipo, String corPenas, boolean nascidoEmCativeiro, boolean registrado) {
+        super(nome, dono, raca, idade, estaDoente,sintomas, tipo);
     }
 
     public boolean getNascidoEmCativeiro() {
@@ -35,5 +35,13 @@ public class Passaro extends Animal{
 
     public void setCorPenas(String corPenas) {
         this.corPenas = corPenas;
+    }
+
+    public boolean isNascidoEmCativeiro() {
+        return nascidoEmCativeiro;
+    }
+
+    public boolean isRegistrado() {
+        return registrado;
     }
 }

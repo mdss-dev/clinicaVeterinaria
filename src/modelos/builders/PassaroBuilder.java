@@ -31,6 +31,11 @@ public class PassaroBuilder {
         this.passaro.setEstaDoente(estaDoente);
         return this;
     }
+
+    public PassaroBuilder sintomas(String sintomas){
+        this.passaro.setSintomas(sintomas);
+        return this;
+    }
     public PassaroBuilder tipo(EnumTipoAnimal tipo){
         this.passaro.setTipo(tipo);
         return this;

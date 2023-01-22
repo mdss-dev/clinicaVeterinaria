@@ -11,8 +11,8 @@ public class Cachorro extends Animal {
         super();
     };
 
-    public Cachorro(String nome, Dono dono, String raca, String idade, boolean estaDoente, EnumTipoAnimal tipo, EnumTamanhoCachorro tamanho, String corPelo, boolean castrado) {
-        super(nome, dono, raca, idade, estaDoente, tipo);
+    public Cachorro(String nome, Dono dono, String raca, String idade, boolean estaDoente, String sintomas, EnumTipoAnimal tipo, EnumTamanhoCachorro tamanho, String corPelo, boolean castrado) {
+        super(nome, dono, raca, idade, estaDoente, sintomas, tipo);
     }
 
     public String getCorPelo() {
@@ -38,4 +38,4 @@ public class Cachorro extends Animal {
     public void setTamanho(EnumTamanhoCachorro tamanho) {
         this.tamanho = tamanho;
     }
-}
+   }

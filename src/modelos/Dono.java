@@ -9,9 +9,11 @@ public class Dono {
     private Endereco endereco;
     private String email;
 
-    public Dono(){}
+    public Dono(){
+        this.identificador = ++id;
+
+    }
     public Dono(String nome, String cpf, String telefone, Endereco endereco, String email) {
-        this.identificador = id++;
         this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;
@@ -65,5 +67,17 @@ public class Dono {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "Dono{" +
+                "identificador=" + identificador +
+                ", nome='" + nome + '\'' +
+                ", cpf='" + cpf + '\'' +
+                ", telefone='" + telefone + '\'' +
+                ", endereco=" + endereco +
+                ", email='" + email + '\'' +
+                '}';
     }
 }

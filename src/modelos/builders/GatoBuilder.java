@@ -35,6 +35,10 @@ public class GatoBuilder {
         this.gato.setEstaDoente(estaDoente);
         return this;
     }
+    public GatoBuilder sintomas(String sintomas){
+        this.gato.setSintomas(sintomas);
+        return this;
+    }
     public GatoBuilder tipo(EnumTipoAnimal tipo){
         this.gato.setTipo(tipo);
         return this;

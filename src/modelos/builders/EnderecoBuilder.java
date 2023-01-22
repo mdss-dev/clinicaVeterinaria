@@ -8,32 +8,32 @@ public class EnderecoBuilder {
         this.endereco = new Endereco();
     }
 
-    public EnderecoBuilder comRua(String rua) {
+    public EnderecoBuilder rua(String rua) {
         this.endereco.setRua(rua);
         return this;
     }
 
-    public EnderecoBuilder comNumero(String numero) {
+    public EnderecoBuilder numero(String numero) {
         this.endereco.setNumero(numero);
         return this;
     }
 
-    public EnderecoBuilder comBairro(String bairro) {
+    public EnderecoBuilder bairro(String bairro) {
         this.endereco.setBairro(bairro);
         return this;
     }
 
-    public EnderecoBuilder comCidade(String cidade) {
+    public EnderecoBuilder cidade(String cidade) {
         this.endereco.setCidade(cidade);
         return this;
     }
 
-    public EnderecoBuilder comEstado(String estado) {
+    public EnderecoBuilder estado(String estado) {
         this.endereco.setEstado(estado);
         return this;
     }
 
-    public EnderecoBuilder comCep(String cep) {
+    public EnderecoBuilder cep(String cep) {
         this.endereco.setCep(cep);
         return this;
     }

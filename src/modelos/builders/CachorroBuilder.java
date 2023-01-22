@@ -1,5 +1,6 @@
 package modelos.builders;
 
+import modelos.Animal;
 import modelos.Cachorro;
 import modelos.Dono;
 import modelos.enuns.EnumTamanhoCachorro;
@@ -36,6 +37,10 @@ public class CachorroBuilder {
         this.cachorro.setEstaDoente(estaDoente);
         return this;
     }
+    public CachorroBuilder sintomas(String sintomas){
+        this.cachorro.setSintomas(sintomas);
+        return this;
+    }
     public CachorroBuilder tipo(EnumTipoAnimal tipo){
         this.cachorro.setTipo(tipo);
         return this;
@@ -51,4 +56,5 @@ public class CachorroBuilder {
     public Cachorro build(){
         return this.cachorro;
     }
+
 }

@@ -17,14 +17,17 @@ public class Animal {
     private LocalDateTime dataHoraInternacao = null;
     private LocalDateTime dataHoraAlta = null;
 
-    public Animal(){}
-    public Animal(String nome, Dono dono, String raca, String idade, boolean estaDoente, EnumTipoAnimal tipo) {
+    public Animal(){
         this.identificador = ++idCounter;
+
+    }
+    public Animal(String nome, Dono dono, String raca, String idade, boolean estaDoente, String sintomas, EnumTipoAnimal tipo) {
         this.nome = nome;
         this.dono = dono;
         this.raca = raca;
         this.idade = idade;
         this.estaDoente = estaDoente;
+        this.sintomas = sintomas;
         this.tipo = tipo;
     }
 
@@ -111,5 +114,21 @@ public class Animal {
 
     public EnumTipoAnimal getTipo() {
         return tipo;
+    }
+
+    @Override
+    public String toString() {
+        return "Animal{" +
+                "identificador=" + identificador +
+                ", tipo=" + tipo + '\'' +
+                ", nome='" + nome + '\'' +
+                ", raca='" + raca + '\'' +
+                ", dono=" + dono.toString() +
+                ", idade='" + idade + '\'' +
+                ", estaDoente=" + estaDoente +
+                ", sintomas='" + sintomas + '\'' +
+                ", dataHoraInternacao=" + dataHoraInternacao +
+                ", dataHoraAlta=" + dataHoraAlta +
+                '}';
     }
 }

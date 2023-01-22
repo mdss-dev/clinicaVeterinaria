@@ -7,69 +7,71 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AnimalRepository {
-    private static List<Animal> animais;
-    private List<Dono> donos;
+    private static List<Animal> animaisAtentidos = new ArrayList<>() ;
+    private static List<Dono> donos = new ArrayList<>();
+
 
     public void AnimalRepository() {
-        this.animais = new ArrayList<>();
-        this.donos = new ArrayList<>();
     }
 
-    public void adicionarDono(Dono dono) {
-        donos.add(dono);
-    }
 
-    public Dono buscarDonoPeloId(int id) {
+    public Dono buscarDonoPeloId(int identificador) {
         for(Dono d: donos){
-            if(d.getIdentificador() == id){
+            if(d.getIdentificador() == identificador){
                 return d;
             }
         }
         return null;
     }
 
-    public Dono buscarDonoPeloCpf(String cpf) {
+    public static void buscarDonoPeloCpf(String cpf) {
         for(Dono d: donos){
             if(d.getCpf().equals(cpf)){
-                return d;
+                System.out.println("Dono encontrado pelo CPF: " +d.getNome());
+                System.out.println();
+                return;
             }
         }
-        return null;
+        System.out.println("Dono não encontrado");
     }
 
-    public void adicionarAnimals(Animal animal, Dono dono) {
+    public static void atenderAnimal(Animal animal, Dono dono) {
         animal.setDono(dono);
-        animais.add(animal);
+        animaisAtentidos.add(animal);
     }
 
-    public void atualizarAnimals(Animal animal) {
-        for(Animal a: animais){
+    public static void atualizarAnimals(Animal animal) {
+        for(Animal a: animaisAtentidos){
             if(a.getIdentificador() == animal.getIdentificador()){
                 a = animal;
+                System.out.println("Animal "+animal.toString()+" atualizado");
                 break;
             }
         }
     }
 
-    public void excluirAnimals(int id) {
-        for(Animal a: animais){
-            if(a.getIdentificador() == id){
-                animais.remove(a);
+    public static void excluirAnimals(int identificador) {
+        for(Animal a: animaisAtentidos){
+            if(a.getIdentificador() == identificador){
+                animaisAtentidos.remove(a);
                 break;
             }
         }
     }
 
-    public static List<Animal> listarAnimais() {
-        return animais;
-    }
-
-    public static Animal buscarAnimalsPeloId(int id) {
-        for(Animal a: animais){
-            if(a.getIdentificador() == id){
+    public static Animal buscarAnimalsPeloId(int identificador) {
+        for(Animal a: animaisAtentidos){
+            if(a.getIdentificador() == identificador){
                 return a;
             }
         }
         return null;
     }
+    public static void listarAnimaisAtendidos() {
+        System.out.println();
+        for (Animal animais : animaisAtentidos) {
+            System.out.println(animais.toString());
+        }
+    }
+
 }

@@ -8,8 +8,8 @@ public class Gato extends Animal{
     private boolean castrado;
 
     public Gato(){}
-    public Gato(String nome, Dono dono, String raca, String idade, boolean estaDoente, EnumTipoAnimal tipo,String corPelo, boolean castrado) {
-        super(nome, dono, raca, idade, estaDoente, tipo);
+    public Gato(String nome, Dono dono, String raca, String idade, boolean estaDoente,String sintomas, EnumTipoAnimal tipo,String corPelo, boolean castrado) {
+        super(nome, dono, raca, idade, estaDoente, sintomas, tipo);
     }
 
     public String getCorPelo() {
