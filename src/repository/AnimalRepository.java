@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AnimalRepository {
-    private List<Animal> animais;
+    private static List<Animal> animais;
     private List<Dono> donos;
 
     public void AnimalRepository() {
@@ -60,11 +60,11 @@ public class AnimalRepository {
         }
     }
 
-    public List<Animal> listarAnimais() {
+    public static List<Animal> listarAnimais() {
         return animais;
     }
 
-    public Animal buscarAnimalsPeloId(int id) {
+    public static Animal buscarAnimalsPeloId(int id) {
         for(Animal a: animais){
             if(a.getIdentificador() == id){
                 return a;

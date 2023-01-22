@@ -7,11 +7,13 @@ public class Passaro extends Animal{
     private String corPenas;
     private boolean nascidoEmCativeiro;
     private boolean registrado;
-    public Passaro(String nome, Dono dono, String raca, int idade, boolean estaDoente, EnumTipoAnimal tipo, String corPenas, boolean nascidoEmCativeiro, boolean registrado) {
+
+    public Passaro() {}
+    public Passaro(String nome, Dono dono, String raca, String idade, boolean estaDoente, EnumTipoAnimal tipo, String corPenas, boolean nascidoEmCativeiro, boolean registrado) {
         super(nome, dono, raca, idade, estaDoente, tipo);
     }
 
-    public boolean isNascidoEmCativeiro() {
+    public boolean getNascidoEmCativeiro() {
         return nascidoEmCativeiro;
     }
 
@@ -19,7 +21,7 @@ public class Passaro extends Animal{
         this.nascidoEmCativeiro = nascidoEmCativeiro;
     }
 
-    public boolean isRegistrado() {
+    public boolean getRegistrado() {
         return registrado;
     }
 

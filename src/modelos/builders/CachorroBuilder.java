@@ -8,7 +8,7 @@ import modelos.enuns.EnumTipoAnimal;
 public class CachorroBuilder {
     private Cachorro cachorro;
 
-    public CachorroBuilder() {q
+    public CachorroBuilder() {
         this.cachorro = new Cachorro();
     }
 
@@ -28,7 +28,7 @@ public class CachorroBuilder {
         this.cachorro.setDono(dono);
         return this;
     }
-    public CachorroBuilder idade(int idade){
+    public CachorroBuilder idade(String idade){
         this.cachorro.setIdade(idade);
         return this;
     }
@@ -47,5 +47,8 @@ public class CachorroBuilder {
     public CachorroBuilder corPelo(String corPelo){
         this.cachorro.setCorPelo(corPelo);
         return this;
+    }
+    public Cachorro build(){
+        return this.cachorro;
     }
 }

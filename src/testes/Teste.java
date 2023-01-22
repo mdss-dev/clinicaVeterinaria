@@ -2,14 +2,14 @@ package testes;
 
 import modelos.*;
 import repository.AnimalRepository;
-import repository.InternacaoAnimais;
+import repository.InternacaoAnimaisRepository;
 
 import java.util.List;
 
 public class Teste {
     public static void main(String[] args) {
             AnimalRepository animalRepo = new AnimalRepository();
-            InternacaoAnimais internacao = new InternacaoAnimais();
+            InternacaoAnimaisRepository internacao = new InternacaoAnimaisRepository();
 
             // Criando donos
             Dono dono1 = new Dono("João", "123.456.789-10", "11 99999-9999", new Endereco("Rua Teste", "Cidade Teste", "Estado Teste", "00000-000"), "joao@email.com");

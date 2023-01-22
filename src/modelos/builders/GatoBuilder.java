@@ -2,14 +2,13 @@ package modelos.builders;
 
 import modelos.Dono;
 import modelos.Gato;
-import modelos.enuns.EnumTamanhoCachorro;
 import modelos.enuns.EnumTipoAnimal;
 
 public class GatoBuilder {
     private Gato gato;
 
     public GatoBuilder() {
-        this.gato = new gato();
+        this.gato = new Gato();
     }
 
     public GatoBuilder nome(String nome) {
@@ -28,7 +27,7 @@ public class GatoBuilder {
         this.gato.setDono(dono);
         return this;
     }
-    public GatoBuilder idade(int idade){
+    public GatoBuilder idade(String idade){
         this.gato.setIdade(idade);
         return this;
     }
@@ -43,5 +42,8 @@ public class GatoBuilder {
     public GatoBuilder corPelo(String corPelo){
         this.gato.setCorPelo(corPelo);
         return this;
+    }
+    public Gato build(){
+        return this.gato;
     }
 }

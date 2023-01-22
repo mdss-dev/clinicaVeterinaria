@@ -9,9 +9,8 @@ public class Animal {
     private int identificador;
     private String nome;
     private String raca;
-    private boolean castrado;
     private Dono dono;
-    private int idade;
+    private String idade;
     private boolean estaDoente;
     private String sintomas;
     private EnumTipoAnimal tipo;
@@ -19,7 +18,7 @@ public class Animal {
     private LocalDateTime dataHoraAlta = null;
 
     public Animal(){}
-    public Animal(String nome, Dono dono, String raca, int idade, boolean estaDoente, EnumTipoAnimal tipo) {
+    public Animal(String nome, Dono dono, String raca, String idade, boolean estaDoente, EnumTipoAnimal tipo) {
         this.identificador = ++idCounter;
         this.nome = nome;
         this.dono = dono;
@@ -85,19 +84,12 @@ public class Animal {
         this.raca = raca;
     }
 
-    public int getIdade() {
+    public String getIdade() {
         return idade;
     }
 
-    public boolean isCastrado() {
-        return castrado;
-    }
 
-    public void setCastrado(boolean castrado) {
-        this.castrado = castrado;
-    }
-
-    public void setIdade(int idade) {
+    public void setIdade(String idade) {
         this.idade = idade;
     }
 

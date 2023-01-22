@@ -5,8 +5,10 @@ import modelos.enuns.EnumTipoAnimal;
 public class Gato extends Animal{
 
     private String corPelo;
+    private boolean castrado;
 
-    public Gato(String nome, Dono dono, String raca, int idade, boolean estaDoente, EnumTipoAnimal tipo,String corPelo) {
+    public Gato(){}
+    public Gato(String nome, Dono dono, String raca, String idade, boolean estaDoente, EnumTipoAnimal tipo,String corPelo, boolean castrado) {
         super(nome, dono, raca, idade, estaDoente, tipo);
     }
 
@@ -16,5 +18,13 @@ public class Gato extends Animal{
 
     public void setCorPelo(String corPelo) {
         this.corPelo = corPelo;
+    }
+
+    public boolean isCastrado() {
+        return castrado;
+    }
+
+    public void setCastrado(boolean castrado) {
+        this.castrado = castrado;
     }
 }
